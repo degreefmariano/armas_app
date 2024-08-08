@@ -1,0 +1,100 @@
+html {
+    min-height: 100%;
+    position: relative;
+}
+
+header {
+    position: fixed;
+    left: 0px;
+    top: 20px;
+    right: 0px;
+    height: 40px;
+    background-color: white;
+    text-align: center;
+}
+
+body {
+    margin: 0;
+    margin-bottom: 40px;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 22mm 1mm 25mm 1mm;
+    top: 310px;
+}
+
+body tr {
+    font-size: 12px;
+}
+
+body th {
+    font-size: 6px;
+}
+
+@page {
+    margin: -5px 50;
+    margin-bottom: 0px;
+}
+
+footer {
+    position: fixed;
+    left: 0px;
+    bottom: -40px;
+    right: 0px;
+    height: 40px;
+    border-bottom: 2px solid #ddd;
+
+}
+
+footer .page:after {
+    content: counter(page);
+}
+
+footer table {
+    width: 100%;
+}
+
+footer p {
+    text-align: center;
+}
+
+footer .izq {
+    text-align: center;
+}
+
+#watermark {
+    position: fixed;
+    font-size: 15px;
+    top: 23%;
+    width: 100%;
+    text-align: center;
+    opacity: .1;
+    transform: rotate(-20deg);
+    transform-origin: 50% 50%;
+    z-index: -1000;
+}
+
+#watermark2 {
+    position: fixed;
+    font-size: 15px;
+    top: 23%;
+    width: 100%;
+    text-align: right;
+    opacity: .2;
+    transform: rotate(-20deg);
+    transform-origin: 50% 50%;
+    z-index: -1000;
+}
+
+#watermark3 {
+    position: fixed;
+    font-size: 30px;
+    top: 80%;
+    width: 100%;
+    text-align: center;
+    opacity: .3;
+    transform: rotate(-20deg);
+    transform-origin: 50% 50%;
+    z-index: -1000;
+}

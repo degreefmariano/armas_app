@@ -1,0 +1,17 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class AuditoriaGestionUsuario extends Model
+{
+    protected $table = 'auditoria_gestion_usuarios';
+    public $timestamps = false;
+    protected $fillable = ['user_id', 'action', 'old_data','new_data'];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'user_id');
+    }
+}

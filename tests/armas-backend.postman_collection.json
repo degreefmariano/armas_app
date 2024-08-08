@@ -1,0 +1,4925 @@
+{
+	"info": {
+		"_postman_id": "3176d4d4-dde0-4eac-891a-482ef2fc91d1",
+		"name": "armas-backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "combos",
+			"item": [
+				{
+					"name": "GET usos de armas",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/api/combos/usos-arma",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"combos",
+								"usos-arma"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET corta-larga de armas",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/api/combos/corta-larga-arma",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"combos",
+								"corta-larga-arma"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET medida-calibre de armas",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/api/combos/medida-calibre-arma",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"combos",
+								"medida-calibre-arma"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "consultas",
+			"item": [
+				{
+					"name": "GET armas por filtros de búsqueda",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{local}}/api/consultas/armas/armas-filtros?offset=10&page=1&search=",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"consultas",
+								"armas",
+								"armas-filtros"
+							],
+							"query": [
+								{
+									"key": "nro_arma",
+									"value": "TBV73305",
+									"disabled": true
+								},
+								{
+									"key": "cod_tipo_arma",
+									"value": "49",
+									"disabled": true
+								},
+								{
+									"key": "cod_marca",
+									"value": "94",
+									"disabled": true
+								},
+								{
+									"key": "cod_calibre_principal",
+									"value": "160",
+									"disabled": true
+								},
+								{
+									"key": "estado",
+									"value": "1",
+									"description": "1- MUY BUENO, 2- BUENO, 3- REGULAR, 4- MALO",
+									"disabled": true
+								},
+								{
+									"key": "situacion",
+									"value": "3",
+									"description": "1- SERVICIO, 2- REPARACION, 3- DEPOSITO, 4- EXTRAVIADA, 5- SECUESTRO JUDICIAL, 6- FUERA DE SERVICIO, 7- DE BAJA, 8- SUSTRAIDA",
+									"disabled": true
+								},
+								{
+									"key": "subsituacion",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "arma_corta_larga",
+									"value": "1",
+									"description": "1- Corta, 2- Larga, 3- Otro",
+									"disabled": true
+								},
+								{
+									"key": "ud_ar",
+									"value": "24",
+									"disabled": true
+								},
+								{
+									"key": "subud_ar",
+									"value": "240100000000",
+									"disabled": true
+								},
+								{
+									"key": "offset",
+									"value": "10"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "search",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET arma por clave",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{local}}/api/consultas/armas/arma-clave?search=SECUESTRO",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"consultas",
+								"armas",
+								"arma-clave"
+							],
+							"query": [
+								{
+									"key": "nro_arma",
+									"value": "TBV73305",
+									"disabled": true
+								},
+								{
+									"key": "situacion",
+									"value": "3",
+									"disabled": true
+								},
+								{
+									"key": "search",
+									"value": "SECUESTRO"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET arma",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{local}}/api/consultas/armas/arma?nro_ficha=31200",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"consultas",
+								"armas",
+								"arma"
+							],
+							"query": [
+								{
+									"key": "nro_ficha",
+									"value": "31200"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET historial arma",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{local}}/api/consultas/armas/historial-arma?nro_ficha=64242",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"consultas",
+								"armas",
+								"historial-arma"
+							],
+							"query": [
+								{
+									"key": "nro_ficha",
+									"value": "64242"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET arma deposito ud",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{local}}/api/consultas/armas/armas-ud?corta_larga=1&offset=10&search=",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"consultas",
+								"armas",
+								"armas-ud"
+							],
+							"query": [
+								{
+									"key": "corta_larga",
+									"value": "1",
+									"description": "1- Corta, 2- Larga, 3- Otro"
+								},
+								{
+									"key": "offset",
+									"value": "10"
+								},
+								{
+									"key": "search",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET arma deposito ud devuelve",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{local}}/api/consultas/armas/armas-ud-devuelve?corta_larga=1&unidad=1&subunidad=010104000000&offset=10&page=1&search=TAURUS",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"consultas",
+								"armas",
+								"armas-ud-devuelve"
+							],
+							"query": [
+								{
+									"key": "corta_larga",
+									"value": "1",
+									"description": "1- Corta, 2- Larga, 3- Otro"
+								},
+								{
+									"key": "unidad",
+									"value": "1"
+								},
+								{
+									"key": "subunidad",
+									"value": "010104000000"
+								},
+								{
+									"key": "offset",
+									"value": "10"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "search",
+									"value": "TAURUS"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET arma dependencia a ud devuelve",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{local}}/api/consultas/armas/armas-dependencia-a-ud-devuelve?subunidad=010107030100&offset=10&page=1&search=ESCO",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"consultas",
+								"armas",
+								"armas-dependencia-a-ud-devuelve"
+							],
+							"query": [
+								{
+									"key": "subunidad",
+									"value": "010107030100"
+								},
+								{
+									"key": "offset",
+									"value": "10"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "search",
+									"value": "ESCO"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET personal legajo para asignar arma",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{local}}/api/consultas/personal/asignar/personal/legajo?nlegajo_ps=686409",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"consultas",
+								"personal",
+								"asignar",
+								"personal",
+								"legajo"
+							],
+							"query": [
+								{
+									"key": "nlegajo_ps",
+									"value": "686409"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET personal legajo para devolver arma",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{local}}/api/consultas/personal/devolucion/personal/legajo?nlegajo_ps=649023",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"consultas",
+								"personal",
+								"devolucion",
+								"personal",
+								"legajo"
+							],
+							"query": [
+								{
+									"key": "nlegajo_ps",
+									"value": "649023"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET personal nombre para asignar arma",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{local}}/api/consultas/personal/asignar/personal/nombre?nombre_ps=ramallo emm&offset=50&page=1",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"consultas",
+								"personal",
+								"asignar",
+								"personal",
+								"nombre"
+							],
+							"query": [
+								{
+									"key": "nombre_ps",
+									"value": "ramallo emm"
+								},
+								{
+									"key": "offset",
+									"value": "50"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET unidades",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{local}}/api/consultas/unidades",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"consultas",
+								"unidades"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET subunidades",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{local}}/api/consultas/subunidades?cod_ud=73",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"consultas",
+								"subunidades"
+							],
+							"query": [
+								{
+									"key": "cod_ud",
+									"value": "73"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET users subunidades",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{local}}/api/consultas/users/subunidades?cod_ud=1",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"consultas",
+								"users",
+								"subunidades"
+							],
+							"query": [
+								{
+									"key": "cod_ud",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET personal historial (legajo)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{local}}/api/consultas/historial/historial-legajo/personal/armas?nlegajo_ps=649023",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"consultas",
+								"historial",
+								"historial-legajo",
+								"personal",
+								"armas"
+							],
+							"query": [
+								{
+									"key": "nlegajo_ps",
+									"value": "649023"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET personal historico (nombre)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{local}}/api/consultas/historial/historial-nombre/personal/armas?nombre_ps=gutierrez jose",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"consultas",
+								"historial",
+								"historial-nombre",
+								"personal",
+								"armas"
+							],
+							"query": [
+								{
+									"key": "nombre_ps",
+									"value": "gutierrez jose"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET personal arma actual (legajo)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{local}}/api/consultas/historial/arma-actual/personal/armas?nlegajo_ps=650048",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"consultas",
+								"historial",
+								"arma-actual",
+								"personal",
+								"armas"
+							],
+							"query": [
+								{
+									"key": "nlegajo_ps",
+									"value": "650048"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET devoluciones (rango fecha)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{local}}/api/consultas/devoluciones/devoluciones?fecha_desde=05-04-2024&fecha_hasta=06-04-2024&tipo_devolucion=1&personal_devuelve=686409&offset=5&page=1",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"consultas",
+								"devoluciones",
+								"devoluciones"
+							],
+							"query": [
+								{
+									"key": "fecha_desde",
+									"value": "05-04-2024"
+								},
+								{
+									"key": "fecha_hasta",
+									"value": "06-04-2024"
+								},
+								{
+									"key": "tipo_devolucion",
+									"value": "1",
+									"description": "1- Personal, 2-Unidad"
+								},
+								{
+									"key": "ud_recibe",
+									"value": "24",
+									"disabled": true
+								},
+								{
+									"key": "personal_devuelve",
+									"value": "686409"
+								},
+								{
+									"key": "ud_arma_anterior",
+									"value": "73",
+									"disabled": true
+								},
+								{
+									"key": "subud_arma_anterior",
+									"value": "730102020000",
+									"disabled": true
+								},
+								{
+									"key": "offset",
+									"value": "5"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET entregas (rango fecha)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{local}}/api/consultas/entregas/entregas?tipo_entrega=1&offset=20&page=1",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"consultas",
+								"entregas",
+								"entregas"
+							],
+							"query": [
+								{
+									"key": "fecha_desde",
+									"value": "13-02-2024",
+									"disabled": true
+								},
+								{
+									"key": "fecha_hasta",
+									"value": "14-02-2024",
+									"disabled": true
+								},
+								{
+									"key": "tipo_entrega",
+									"value": "1",
+									"description": "1- Personal, 2-Unidad"
+								},
+								{
+									"key": "legajo",
+									"value": "630152",
+									"disabled": true
+								},
+								{
+									"key": "ud_recibe",
+									"value": "73",
+									"disabled": true
+								},
+								{
+									"key": "subud_recibe",
+									"value": "730102020000",
+									"disabled": true
+								},
+								{
+									"key": "offset",
+									"value": "20"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET cuibs de arma",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{local}}/api/consultas/cuibs/cuibs?nro_ficha=31200",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"consultas",
+								"cuibs",
+								"cuibs"
+							],
+							"query": [
+								{
+									"key": "nro_ficha",
+									"value": "31200"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET arma por clave para asignar",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{local}}/api/consultas/armas/arma-clave-asignar?search=MUY BUENO",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"consultas",
+								"armas",
+								"arma-clave-asignar"
+							],
+							"query": [
+								{
+									"key": "nro_arma",
+									"value": "AAA111",
+									"disabled": true
+								},
+								{
+									"key": "search",
+									"value": "MUY BUENO"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "abm",
+			"item": [
+				{
+					"name": "tipos de arma",
+					"item": [
+						{
+							"name": "GET tipos de armas",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}/api/abm/tipos/tipos-arma",
+									"host": [
+										"{{local}}"
+									],
+									"path": [
+										"api",
+										"abm",
+										"tipos",
+										"tipos-arma"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "POST nuevo tipo de arma",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"descripcion\": \"PISTOLA ARZON II\" \r\n}"
+								},
+								"url": {
+									"raw": "{{local}}/api/abm/tipos/tipo-arma",
+									"host": [
+										"{{local}}"
+									],
+									"path": [
+										"api",
+										"abm",
+										"tipos",
+										"tipo-arma"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PUT modificar tipo de arma",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"descripcion\": \"PISTOLA ARZON I\" \r\n}"
+								},
+								"url": {
+									"raw": "{{local}}/api/abm/tipos/tipo-arma/155",
+									"host": [
+										"{{local}}"
+									],
+									"path": [
+										"api",
+										"abm",
+										"tipos",
+										"tipo-arma",
+										"155"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "marcas de arma",
+					"item": [
+						{
+							"name": "GET marcas de armas",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}/api/abm/marcas/marcas-arma",
+									"host": [
+										"{{local}}"
+									],
+									"path": [
+										"api",
+										"abm",
+										"marcas",
+										"marcas-arma"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "POST nueva marca de arma",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"descripcion\": \"LEGEND II\" \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local}}/api/abm/marcas/marca-arma",
+									"host": [
+										"{{local}}"
+									],
+									"path": [
+										"api",
+										"abm",
+										"marcas",
+										"marca-arma"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PUT modificar marca de arma",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"descripcion\": \"LEGEND I\" \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local}}/api/abm/marcas/marca-arma/3157",
+									"host": [
+										"{{local}}"
+									],
+									"path": [
+										"api",
+										"abm",
+										"marcas",
+										"marca-arma",
+										"3157"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "calibres de arma",
+					"item": [
+						{
+							"name": "GET calibres de armas",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}/api/abm/calibres/calibres-arma",
+									"host": [
+										"{{local}}"
+									],
+									"path": [
+										"api",
+										"abm",
+										"calibres",
+										"calibres-arma"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "POST nuevo calibre de arma",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"descripcion\": \"106.7\" \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local}}/api/abm/calibres/calibre-arma",
+									"host": [
+										"{{local}}"
+									],
+									"path": [
+										"api",
+										"abm",
+										"calibres",
+										"calibre-arma"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PUT modificar calibre de arma",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"descripcion\": \"106.9\" \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local}}/api/abm/calibres/calibre-arma/561",
+									"host": [
+										"{{local}}"
+									],
+									"path": [
+										"api",
+										"abm",
+										"calibres",
+										"calibre-arma",
+										"561"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "situaciones de arma",
+					"item": [
+						{
+							"name": "GET situaciones de armas ",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{local}}/api/abm/situaciones/situaciones-arma",
+									"host": [
+										"{{local}}"
+									],
+									"path": [
+										"api",
+										"abm",
+										"situaciones",
+										"situaciones-arma"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PUT modificar situacion de arma",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nom_situacion\": \"ALTA EN DEPOSITO\" \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local}}/api/abm/situaciones/situacion-arma/10",
+									"host": [
+										"{{local}}"
+									],
+									"path": [
+										"api",
+										"abm",
+										"situaciones",
+										"situacion-arma",
+										"10"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "POST nueva situacion de arma",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nom_situacion\": \"REINGRESO\" \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local}}/api/abm/situaciones/situacion-arma",
+									"host": [
+										"{{local}}"
+									],
+									"path": [
+										"api",
+										"abm",
+										"situaciones",
+										"situacion-arma"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "subsituaciones de arma",
+					"item": [
+						{
+							"name": "GET subsituaciones de armas",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{local}}/api/abm/subsituaciones/subsituaciones-arma?cod_situacion=3",
+									"host": [
+										"{{local}}"
+									],
+									"path": [
+										"api",
+										"abm",
+										"subsituaciones",
+										"subsituaciones-arma"
+									],
+									"query": [
+										{
+											"key": "cod_situacion",
+											"value": "3",
+											"description": "EN DEPOSITO"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "estados de arma",
+					"item": [
+						{
+							"name": "GET estados de armas",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}/api/abm/estados/estados-arma",
+									"host": [
+										"{{local}}"
+									],
+									"path": [
+										"api",
+										"abm",
+										"estados",
+										"estados-arma"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "POST nuevo estado de arma",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nom_estado\": \"ESTADO PRUEBA\" \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local}}/api/abm/estados/estado-arma",
+									"host": [
+										"{{local}}"
+									],
+									"path": [
+										"api",
+										"abm",
+										"estados",
+										"estado-arma"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PUT modificar estado de arma",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nom_estado\": \"ESTADO PRUEBA I\" \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local}}/api/abm/estados/estado-arma/5",
+									"host": [
+										"{{local}}"
+									],
+									"path": [
+										"api",
+										"abm",
+										"estados",
+										"estado-arma",
+										"5"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "arma",
+			"item": [
+				{
+					"name": "POST nueva arma",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nro_arma\": \"NUEVAARMA2024\",\r\n    \"cod_tipo_arma\": 49,\r\n    \"cod_marca\": 630,\r\n    \"cod_calibre_principal\":160,\r\n    \"modelo\": \"PT 917C\",\r\n    \"medida_calibre_principal\": 1,\r\n    \"largo_canon_principal\": \"111\",\r\n    \"arma_corta_larga\": 1,\r\n    \"estado\": 1,\r\n    \"clasificacion\": 1,\r\n    \"fecha_alta\": \"19-02-2024\",\r\n    \"obs\":\"Con Kit de limpieza y dos cargadores\"       \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/api/arma/arma",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"arma",
+								"arma"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT modificar arma",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nro_arma\": \"NUEVAARMA2024\",\r\n    \"cod_tipo_arma\": 49,\r\n    \"cod_marca\": 630,\r\n    \"cod_calibre_principal\":160,\r\n    \"modelo\": \"PT 917C\",\r\n    \"medida_calibre_principal\": 1,\r\n    \"largo_canon_principal\": \"1111\",\r\n    \"arma_corta_larga\": 1,\r\n    \"cod_estado\": 2,  \r\n    \"clasificacion\": 1,\r\n    \"fecha_alta\": \"21-02-2024\",        \r\n    \"obs\":\"Se actualizo arma, con Kit de limpieza y dos cargadores\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/api/arma/arma/64248",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"arma",
+								"arma",
+								"64248"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT modificar estado arma",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cod_estado\": 2,  \r\n    \"obs\": \"PASO DE MUY BUENO A BUENO\"    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/api/arma/estado/arma/31200",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"arma",
+								"estado",
+								"arma",
+								"31200"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT modificar situacion arma",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"situacion\": 3,      \r\n    \"obs\": \"Se devolvio el arma\",\r\n    \"sub_situacion\": 1,\r\n    \"trabajo_realizado\": \"\",\r\n    \"fecha_hecho\": \"2024-04-20\",\r\n    \"fecha_movimiento\": \"2024-04-20\",\r\n    \"lugar_hecho\": \"\",\r\n    \"dep_interviniente\": \"\",\r\n    \"fiscalia_interviniente\": \"\",\r\n    \"victimas\": \"\",\r\n    \"imputados\": \"\",\r\n    \"caratula\": \"\",\r\n    \"lugar_deposito\": \"\",\r\n    \"cod_ud\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/api/arma/situacion/arma/31200",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"arma",
+								"situacion",
+								"arma",
+								"31200"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "personal (para gestion de usuarios)",
+			"item": [
+				{
+					"name": "GET personal legajo (para gestión de usr)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{local}}/api/gestion/usr/personal?nlegajo_ps=630152",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"gestion",
+								"usr",
+								"personal"
+							],
+							"query": [
+								{
+									"key": "nlegajo_ps",
+									"value": "630152"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET personal nombre (para gestión de usr)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/gestion/usr/personal/nombre?nombre_ps=rodriguez",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"gestion",
+								"usr",
+								"personal",
+								"nombre"
+							],
+							"query": [
+								{
+									"key": "nombre_ps",
+									"value": "rodriguez"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "cuib",
+			"item": [
+				{
+					"name": "POST nuevo cuib de arma",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nro_ficha\": 31200,\r\n    \"sobre1_cuib\": 52320, \r\n    \"sobre2_cuib\": 52321,\r\n    \"caja_cuib\": \"403/23\",\r\n    \"fecha_cuib\": \"2023-12-20\"\r\n}"
+						},
+						"url": {
+							"raw": "{{local}}/api/cuibs/cuib",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"cuibs",
+								"cuib"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pdf",
+			"item": [
+				{
+					"name": "Detalle arma PDF",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{local}}/api/impresiones/pdf/arma?nro_ficha=64369",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"impresiones",
+								"pdf",
+								"arma"
+							],
+							"query": [
+								{
+									"key": "nro_ficha",
+									"value": "64369"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Acta entrega personalizada PDF",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{local}}/api/impresiones/pdf/entrega/personal?id_entrega=130",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"impresiones",
+								"pdf",
+								"entrega",
+								"personal"
+							],
+							"query": [
+								{
+									"key": "id_entrega",
+									"value": "130"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Acta devolucion personalizada PDF",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{local}}/api/impresiones/pdf/devolucion/personal?id_devolucion=43",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"impresiones",
+								"pdf",
+								"devolucion",
+								"personal"
+							],
+							"query": [
+								{
+									"key": "id_devolucion",
+									"value": "43"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Acta entrega masiva PDF",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{local}}/api/impresiones/pdf/entrega/masiva?id_entrega=130",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"impresiones",
+								"pdf",
+								"entrega",
+								"masiva"
+							],
+							"query": [
+								{
+									"key": "id_entrega",
+									"value": "130"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Acta devolucion masiva PDF",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{local}}/api/impresiones/pdf/devolucion/masiva?id_devolucion=49",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"impresiones",
+								"pdf",
+								"devolucion",
+								"masiva"
+							],
+							"query": [
+								{
+									"key": "id_devolucion",
+									"value": "49"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "asignaciones",
+			"item": [
+				{
+					"name": "Entrega a personal",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nro_ficha\": 64369,\r\n    \"legajo\": 630152,\r\n    \"cargadores\": 2,\r\n    \"municiones\": 34,\r\n    \"fecha_entrega\": \"03-04-2024\",\r\n    \"obs\":\"Con Kit de limpieza 2\"       \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/api/asignaciones/asignacion/personal/arma",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"asignaciones",
+								"asignacion",
+								"personal",
+								"arma"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Entrega masiva del D4",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"legajo\": 527858,\r\n    \"unidad\": 1,\r\n    \"subunidad\": \"010104000000\",\r\n    \"armas\": [33276, 17153, 64325],\r\n    \"obs\":\"obs de prueba entrega masiva\"       \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/api/asignaciones/asignacion/masiva/arma",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"asignaciones",
+								"asignacion",
+								"masiva",
+								"arma"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Entrega masiva armas largas a dependencia",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"legajo\": 527858,\r\n    \"unidad\": 1,\r\n    \"subunidad\": \"010104000000\",\r\n    \"armas\": [33276, 17153, 64325],\r\n    \"obs\":\"obs de prueba entrega masiva\"       \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/api/asignaciones/asignacion/masiva/largas",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"asignaciones",
+								"asignacion",
+								"masiva",
+								"largas"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "devoluciones",
+			"item": [
+				{
+					"name": "Devolucion de personal",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"legajo\": 686409,\r\n    \"nro_ficha\": 64248,\r\n    \"cargadores\": 2,\r\n    \"municiones\": 10,\r\n    \"estado\": 2,\r\n    \"obs\": \"Con Kit de limpieza en buenas cond\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/api/devoluciones/devolucion/personal/arma",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"devoluciones",
+								"devolucion",
+								"personal",
+								"arma"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Devolucion especial de personal",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"legajo\": 567736,\r\n    \"nro_ficha\": 19870,\r\n    \"estado\": 2,\r\n    \"unidad\": 1,\r\n    \"subunidad\": \"010104000000\",\r\n    \"obs\": \"Devuelve fuera de su Unidad de Destino\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/api/devoluciones/especiales/personal/arma",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"devoluciones",
+								"especiales",
+								"personal",
+								"arma"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Devolucion masiva a D4 y UD",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"legajo\": 650048,\r\n    \"unidad\": 1,\r\n    \"subunidad\": \"010104000000\",\r\n    \"armas\": [64112, 64113],\r\n    \"obs\": \"obs de prueba devolucion masiva\"       \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/api/devoluciones/devolucion/masiva/armas",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"devoluciones",
+								"devolucion",
+								"masiva",
+								"armas"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "estadisticas",
+			"item": [
+				{
+					"name": "GET subsituacion por UD",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/api/estadisticas/deposito/ud",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"estadisticas",
+								"deposito",
+								"ud"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET situacion por UD",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/api/estadisticas/situacion/ud",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"estadisticas",
+								"situacion",
+								"ud"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET corta-larga por UD",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/api/estadisticas/corta-larga-arma/ud",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"estadisticas",
+								"corta-larga-arma",
+								"ud"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Arma en Servicio GRAL",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/api/estadisticas/servicio/gral",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"estadisticas",
+								"servicio",
+								"gral"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Arma Larga en Servicio por SUB UD",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/api/estadisticas/servicio-larga-sub-ud/ud",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"estadisticas",
+								"servicio-larga-sub-ud",
+								"ud"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Arma en Deposito GRAL",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/api/estadisticas/deposito/gral",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"estadisticas",
+								"deposito",
+								"gral"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Arma total GRAL",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/api/estadisticas/arma/gral",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"estadisticas",
+								"arma",
+								"gral"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "auditorias",
+			"item": [
+				{
+					"name": "GET Historial Login",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{local}}/api/auditoria/historial/login?fecha_desde=2024-04-23&fecha_hasta=2024-04-24&offset=10&page=1",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"auditoria",
+								"historial",
+								"login"
+							],
+							"query": [
+								{
+									"key": "fecha_desde",
+									"value": "2024-04-23"
+								},
+								{
+									"key": "fecha_hasta",
+									"value": "2024-04-24"
+								},
+								{
+									"key": "offset",
+									"value": "10"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Historial Arma",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{local}}/api/auditoria/historial/arma?offset=10&nro_arma=AAA111",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"auditoria",
+								"historial",
+								"arma"
+							],
+							"query": [
+								{
+									"key": "offset",
+									"value": "10"
+								},
+								{
+									"key": "nro_arma",
+									"value": "AAA111"
+								},
+								{
+									"key": "page",
+									"value": "1",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 1|kzdxAgRKXqT0W4AiBAejfTKVOPNIYctgnm54EMj1",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 102,\r\n    \"legajo\": 771635,\r\n    \"usuario\": \"MANSILLA JORGELINA MIA\",\r\n    \"documento\": \"378324751\",\r\n    \"cod_ud\": 73,\r\n    \"cod_subud\": \"730108000000\",\r\n    \"obs_usr\": \"OBS\",\r\n    \"estado_usr\": 1,\r\n    \"rol\": 1,\r\n    \"fecha_alta\": \"2023-12-12\",\r\n    \"localidad\": 386\r\n}"
+						},
+						"url": {
+							"raw": "{{local}}/api/user/update",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cambiar password",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman.",
+								"key": "Authorization",
+								"value": "Bearer 1|kzdxAgRKXqT0W4AiBAejfTKVOPNIYctgnm54EMj1",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    // \"newPassword\": \"Mariano1\",\r\n    // \"newPassword_confirmation\": \"Mariano1\",\r\n    // \"passwordActual\": \"mariano1982\"\r\n    \"newPassword\": \"mariano1982\",\r\n    \"newPassword_confirmation\": \"mariano1982\",\r\n    \"passwordActual\": \"Mariano1\"\r\n}"
+						},
+						"url": {
+							"raw": "{{local}}/api/user/cambiar/password",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"cambiar",
+								"password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "rol",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 1|kzdxAgRKXqT0W4AiBAejfTKVOPNIYctgnm54EMj1",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{local}}/api/user/roles",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"roles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user (consulta)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 1|kzdxAgRKXqT0W4AiBAejfTKVOPNIYctgnm54EMj1",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{local}}/api/user?legajo=777901",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"user"
+							],
+							"query": [
+								{
+									"key": "legajo",
+									"value": "777901"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "estado",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 1|kzdxAgRKXqT0W4AiBAejfTKVOPNIYctgnm54EMj1",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{local}}/api/user/estados",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"estados"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "index",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 1|kzdxAgRKXqT0W4AiBAejfTKVOPNIYctgnm54EMj1",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{local}}/api/user/index?page=1&estado_usr=2",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"index"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "offset",
+									"value": "10",
+									"disabled": true
+								},
+								{
+									"key": "cod_ud",
+									"value": "63",
+									"disabled": true
+								},
+								{
+									"key": "cod_subud",
+									"value": "630100000000",
+									"disabled": true
+								},
+								{
+									"key": "estado_usr",
+									"value": "2",
+									"description": "1 - ACTIVO 2 - INACTIVO"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localidades",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 1|kzdxAgRKXqT0W4AiBAejfTKVOPNIYctgnm54EMj1",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{local}}/api/user/localidades?id=2",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"localidades"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "departamentos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 1|kzdxAgRKXqT0W4AiBAejfTKVOPNIYctgnm54EMj1",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{local}}/api/user/dptos",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"dptos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "entrega password pdf",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 1|kzdxAgRKXqT0W4AiBAejfTKVOPNIYctgnm54EMj1",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"legajo\": 567736\r\n}"
+						},
+						"url": {
+							"raw": "{{local}}/api/user/nota/entrega/pdf",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"nota",
+								"entrega",
+								"pdf"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "verificar personal",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 1|kzdxAgRKXqT0W4AiBAejfTKVOPNIYctgnm54EMj1",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{local}}/api/user/verificarPersonal?legajo=567736",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"verificarPersonal"
+							],
+							"query": [
+								{
+									"key": "legajo",
+									"value": "567736"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "perfil",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 1|kzdxAgRKXqT0W4AiBAejfTKVOPNIYctgnm54EMj1",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"legajo\": 567736\r\n}"
+						},
+						"url": {
+							"raw": "{{local}}/api/user/perfil",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"perfil"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 1|kzdxAgRKXqT0W4AiBAejfTKVOPNIYctgnm54EMj1",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{local}}/api/logout",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login admin armas",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Extraer el nuevo token de la respuesta JSON\r",
+									"var nuevoToken = pm.response.json().token;\r",
+									"\r",
+									"// Actualizar el valor de la variable de entorno \"token\"\r",
+									"pm.environment.set(\"token\", nuevoToken);"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"JOSE\",\r\n    \"password\": \"ALEFRE\"\r\n}"
+						},
+						"url": {
+							"raw": "{{local}}/api/login",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "login carga",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "// {\r\n//     \"email\":\"user896\",\r\n//     \"password\":\"640948\"\r\n// }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local}}/api/login",
+									"host": [
+										"{{local}}"
+									],
+									"path": [
+										"api",
+										"login"
+									]
+								}
+							},
+							"_postman_previewlanguage": "Text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "login consulta",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "// {\r\n//     \"email\":\"user908\",\r\n//     \"password\":\"672050\"\r\n// }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local}}/api/login",
+									"host": [
+										"{{local}}"
+									],
+									"path": [
+										"api",
+										"login"
+									]
+								}
+							},
+							"_postman_previewlanguage": "Text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "store",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 1|kzdxAgRKXqT0W4AiBAejfTKVOPNIYctgnm54EMj1",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"legajo\": 777897,\r\n    \"name\": \"ZAMBITO DELGADO ALEXANDER\",\r\n    \"usuario\": \"USUARIO146\",\r\n    \"documento\": 42480835,\r\n    \"rol\": 1,\r\n    \"observacion\": \"obs\",\r\n    \"unidad\": 10,\r\n    \"subunidad\": \"100101100000\",\r\n    \"localidad\": 386\r\n}"
+						},
+						"url": {
+							"raw": "{{local}}/api/user/store",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"store"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "blanquear password",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 1|kzdxAgRKXqT0W4AiBAejfTKVOPNIYctgnm54EMj1",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"legajo\": 771244\r\n}"
+						},
+						"url": {
+							"raw": "{{local}}/api/user/blanquearPassword",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"blanquearPassword"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Importacion",
+			"item": [
+				{
+					"name": "Download template",
+					"item": [
+						{
+							"name": "armas largas template",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}/api/importar/download/template/armas-largas",
+									"host": [
+										"{{local}}"
+									],
+									"path": [
+										"api",
+										"importar",
+										"download",
+										"template",
+										"armas-largas"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "armas cortas template",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}/api/importar/download/template/armas-cortas",
+									"host": [
+										"{{local}}"
+									],
+									"path": [
+										"api",
+										"importar",
+										"download",
+										"template",
+										"armas-cortas"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "listado de procesos",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{local}}/api/importar/?offset=20&fecha_desde=2024-03-25&fecha_hasta=2024-03-27&estado=ERROR",
+									"host": [
+										"{{local}}"
+									],
+									"path": [
+										"api",
+										"importar",
+										""
+									],
+									"query": [
+										{
+											"key": "offset",
+											"value": "20"
+										},
+										{
+											"key": "fecha_desde",
+											"value": "2024-03-25"
+										},
+										{
+											"key": "fecha_hasta",
+											"value": "2024-03-27"
+										},
+										{
+											"key": "estado",
+											"value": "ERROR",
+											"description": "FALLIDO - ERROR - OK"
+										},
+										{
+											"key": "page",
+											"value": "1",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "proceso por id",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{local}}/api/importar/181",
+									"host": [
+										"{{local}}"
+									],
+									"path": [
+										"api",
+										"importar",
+										"181"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "importar excel armas cortas",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/JOSE/Downloads/template_armas_cortas.xlsx"
+								},
+								{
+									"key": "tipo",
+									"value": "1",
+									"type": "text"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/api/importar/excel-armas/cortas",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"importar",
+								"excel-armas",
+								"cortas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "importar excel armas largas",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/JOSE/Downloads/template_armas_largas.xlsx"
+								},
+								{
+									"key": "tipo",
+									"value": "1",
+									"type": "text"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/api/importar/excel-armas/largas",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"importar",
+								"excel-armas",
+								"largas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "dowload excel procesador error",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{local}}/api/importar/download/excel/procesados-error/181?tipo=error",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"importar",
+								"download",
+								"excel",
+								"procesados-error",
+								"181"
+							],
+							"query": [
+								{
+									"key": "tipo",
+									"value": "error",
+									"description": "original - error"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "reportes",
+			"item": [
+				{
+					"name": "generar reporte de armas",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 2503|UUnea4b7ogLmmzpDuP9tWXEpfVFjemzPzRq7L1wW"
+							}
+						],
+						"url": {
+							"raw": "{{local}}/api/exportar/reporte-armas/?arma_corta_larga=1&ud_ar=1&subud_ar=730102020000",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"exportar",
+								"reporte-armas",
+								""
+							],
+							"query": [
+								{
+									"key": "cod_tipo_arma",
+									"value": "49",
+									"disabled": true
+								},
+								{
+									"key": "cod_marca",
+									"value": "94",
+									"disabled": true
+								},
+								{
+									"key": "cod_calibre_principal",
+									"value": "160",
+									"disabled": true
+								},
+								{
+									"key": "estado",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "situacion",
+									"value": "3",
+									"disabled": true
+								},
+								{
+									"key": "sub_situacion",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "arma_corta_larga",
+									"value": "1"
+								},
+								{
+									"key": "ud_ar",
+									"value": "1"
+								},
+								{
+									"key": "subud_ar",
+									"value": "730102020000"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "descargar reporte de armas",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 2503|UUnea4b7ogLmmzpDuP9tWXEpfVFjemzPzRq7L1wW"
+							}
+						],
+						"url": {
+							"raw": "{{local}}/api/descargar/reporte-armas",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"descargar",
+								"reporte-armas"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cambios de Unidad",
+			"item": [
+				{
+					"name": "obtiene el personal que cambio de unidad",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 2503|UUnea4b7ogLmmzpDuP9tWXEpfVFjemzPzRq7L1wW"
+							}
+						],
+						"url": {
+							"raw": "{{local}}/api/cambio-unidad/?offset",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"cambio-unidad",
+								""
+							],
+							"query": [
+								{
+									"key": "offset",
+									"value": null
+								},
+								{
+									"key": "page",
+									"value": "1",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "modificar unidad",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/api/cambio-unidad/24186?ud_nueva=75",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"cambio-unidad",
+								"24186"
+							],
+							"query": [
+								{
+									"key": "ud_nueva",
+									"value": "75"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
